@@ -17,7 +17,7 @@ public:
 
         setFillColor(sf::Color(r, g, b));
         setOutlineThickness(2.f);
-        setOutlineColor(sf::Color::Black);
+        setOutlineColor(sf::Color::White);
     }
 
     void moveInDirection(const sf::Time &elapsed, const sf::Keyboard::Key &key) {
@@ -66,7 +66,7 @@ private:
 int main() {
     sf::RenderWindow window(sf::VideoMode(800, 600), "Moving rectangle");
 
-    CustomRectangleShape rect(sf::Vector2f(100.f, 100.f));
+    CustomRectangleShape rect(sf::Vector2f(140.f, 140.f));
     rect.setPosition(100.f, 100.f);
     rect.setWindowSize(window.getSize());
 
@@ -91,7 +91,7 @@ int main() {
             }
         }
 
-        window.clear(sf::Color::White);
+        window.clear(sf::Color::Black);
         window.draw(rect);
         window.display();
     }
